@@ -1,6 +1,6 @@
 # braindocsClient
 
-The goal of the braindocsClient is to provide a utility for BrainDocs users to interact with the BrainDocs API.
+The goal of the braindocsClient is to provide a utility for BrainDocs users to interact with the [BrainDocs API](https://ai-one.box.com/s/73fku761ffnekcwvb1pkl7rznqic0y6k).
 
 ## Core Features:
 * Get Analysis Results from BrainDocs (via API) and insert into MySQL Database
