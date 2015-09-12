@@ -2,7 +2,7 @@
 
 The goal of the braindocsClient is to provide a utility for BrainDocs users to interact with the [BrainDocs API](https://ai-one.box.com/s/73fku761ffnekcwvb1pkl7rznqic0y6k).
 
-Currently it contains one script `braindocs2datbase` that helps the user to export analysis results from BrainDocs into a datbase of their choice.
+Currently it contains one script `braindocs2database` that helps the user to export analysis results from BrainDocs into a datbase of their choice.
 
 ## Installation
 
