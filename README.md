@@ -8,14 +8,14 @@ Currently it contains one script `braindocs2datbase` that helps the user to expo
 
 The current version of braindocsClient can be installed by issuing the following command:
 
-```bash
-pip install git+https://github.com/ai-one/braindocsClient.git
+```
+$ pip install git+https://github.com/ai-one/braindocsClient.git
 ````
 
 To install a specific release or experimental branch, run:
 
-```bash
-pip install git+https://github.com/ai-one/braindocsClient-py.git@v1.0.0
+```
+$ pip install git+https://github.com/ai-one/braindocsClient-py.git@v1.0.0
 ```
 
 ## Scripts
