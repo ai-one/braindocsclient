@@ -1,8 +1,8 @@
-# braindocsClient
+# BraindocsClient
 
-The goal of the braindocsClient is to provide a utility for BrainDocs users to interact with the [BrainDocs API](https://ai-one.box.com/s/73fku761ffnekcwvb1pkl7rznqic0y6k).
+The goal of the BraindocsClient is to provide a utility for BrainDocs users to interact with the [BrainDocs API](https://ai-one.box.com/s/73fku761ffnekcwvb1pkl7rznqic0y6k).
 
-Currently it contains one script `braindocs2database` that helps the user to export analysis results from BrainDocs into a datbase of their choice.
+Currently it contains `braindocsclient` library for talking to the BrainDocs API and the script `braindocs2database` that helps the user to export analysis results from BrainDocs into a database of their choice.
 
 ## Installation
 
@@ -73,3 +73,17 @@ __Additional Suggested Requirements:__
 
 __Core Features:__
 * Select TextUnits from MySQL Database and push to BrainDocs (via API)
+
+## Library
+
+The `braindocsclient.BraindocsApi` class facilitates the communication between a client and the analyst-toolbox's BrainDocs:
+
+### `braindocsclient.BraindocsApi`
+
+__`getAnalysisResults()`__
+
+Retrieve JSON with all available analysis results.
+
+__`getAnalysisDetailsTextUnits(analysisId)`__
+
+Retrieve JSON with textunit scores for a specific analysis result.
