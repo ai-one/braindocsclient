@@ -7,7 +7,8 @@ __version__ = "1.0.1"
 
 setup (name = "braindocsclient",
         version = __version__,
-        description = "The braindocsclient collects client scripts to help with braindocs/analys-toolbox.",
+        description = ("The braindocsclient facilitates communication between client and BrainDocs API"
+                       " and collects client scripts for braindocs/analyst-toolbox."),
         packages = ["braindocsclient", "braindocs2database"],
         author="Thomas Diggelmann",
         author_email="td@ai-one.com",
