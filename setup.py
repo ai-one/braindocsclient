@@ -5,10 +5,10 @@ from setuptools import setup, find_packages
 
 __version__ = "1.0.0"
 
-setup (name = "braindocs-client",
+setup (name = "braindocsclient",
         version = __version__,
-        description = "The braindocs-client collects client scripts to help with braindocs/analys-toolbox.",
-        packages = ["braindocs2database"],
+        description = "The braindocsclient collects client scripts to help with braindocs/analys-toolbox.",
+        packages = ["braindocsclient", "braindocs2database"],
         author="Thomas Diggelmann",
         author_email="td@ai-one.com",
         url="https://github.com/ai-one/braindocsClient",

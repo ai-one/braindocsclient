@@ -6,7 +6,7 @@ from __future__ import print_function
 import dateutil.parser
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from bdAPI import bdAPI
+from braindocsclient import BraindocsApi
 from database import Base, AnalysisResult, AnalysisResultTextUnit, session_scope
 from configparser import PromptingConfigParser, promptyesno
 
@@ -70,7 +70,7 @@ def main():
     """ Setup braindocs connection
     """
 
-    bd = bdAPI(
+    bd = BraindocsApi(
         username=cfg.get("braindocs", "username"),
         password=cfg.get("braindocs", "password"),
         baseURL=cfg.get("braindocs", "url"))

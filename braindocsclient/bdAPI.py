@@ -7,7 +7,7 @@ import requests
 # turn off warnings
 requests.packages.urllib3.disable_warnings()
 
-class bdAPI(object):
+class BraindocsApi(object):
     def __init__(self, username, password, baseURL):
         """ Post request to login page. Set the "verify" option to false, as the
             ai-one SSL Certificates are not presently verified. """
