@@ -6,7 +6,7 @@ Currently it contains `braindocsclient` library for talking to the BrainDocs API
 
 ## Installation
 
-The current version of braindocsClient can be installed by issuing the following command:
+The current version of BraindocsClient can be installed by issuing the following command:
 
 ```
 $ pip install git+https://github.com/ai-one/braindocsclient.git
@@ -15,7 +15,7 @@ $ pip install git+https://github.com/ai-one/braindocsclient.git
 To install a specific release or experimental branch, run:
 
 ```
-$ pip install git+https://github.com/ai-one/braindocsclient-py.git@v1.0.1
+$ pip install git+https://github.com/ai-one/braindocsclient.git@v1.0.1
 ```
 
 ## Scripts
