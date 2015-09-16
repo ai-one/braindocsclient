@@ -13,7 +13,7 @@ setup (name = "braindocsclient",
         author="Thomas Diggelmann",
         author_email="td@ai-one.com",
         url="https://github.com/ai-one/braindocsClient",
-        install_requires=["requests", "sqlalchemy", "python-dateutil", "mysql-python"],
+        install_requires=["requests", "sqlalchemy", "python-dateutil"],
         entry_points={
             'console_scripts': [
                 'braindocs2database = braindocs2database.__main__:main'

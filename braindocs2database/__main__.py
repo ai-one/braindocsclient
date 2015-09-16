@@ -39,7 +39,7 @@ def main():
     # add default settings
     cfg.add_section("braindocs")
     cfg.add_section("database")
-    cfg.set("database", "url", "mysql://root@localhost/braindocs")
+    cfg.set("database", "url", "sqlite:///braindocs_export.db")
     cfg.set("braindocs", "username", "bd_user")
     cfg.set("braindocs", "password", "bd_pw")
     cfg.set("braindocs", "url", "https://nathandev2.cloudapp.net/at")

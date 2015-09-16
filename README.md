@@ -42,13 +42,33 @@ BRAINDOCS
    password: bd_password
    url: https://nathandev2.cloudapp.net/at
 DATABASE
-   url: mysql://root@localhost/braindocs
+   url: sqlite:///braindocs_export.db
 
 
 Update settings? [no]?
 ```
 
-It displays the current settings and asks the user if he wants to update. If `no` (default option when hitting `Enter`), the program runs the export/import with the given settings:
+It displays the current settings and asks the user if he wants to update the configuration. 
+
+__Local Export__
+
+Per default `braindocs2database` exports the data into a local [SQLite](https://www.sqlite.org/) database.
+
+__MySQL Export__
+
+To export into a [MySQL](https://www.mysql.com/), the `DATABASE -> url` option needs to be changed from `sqlite:///braindocs_export.db` to e.g.:
+
+```
+mysql://root@localhost/braindocs
+```
+
+Make sure that the appropriate Python extension for MySQL is installed. This can be done via:
+
+```
+pip install mysql-python
+```
+
+If `no` (default option when hitting `Enter`), the program runs the export/import with the given settings:
 
 ```
 Starting import...
