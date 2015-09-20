@@ -38,10 +38,10 @@ The current version of BraindocsClient can be found at https://github.com/ai-one
 3. Install the program, at the Command Prompt type:
 
 ```
-pip install [location and name of the downloaded zip file]
+C:\> pip install [location and name of the downloaded zip file]
 ```
 
-For example: `pip install C:\Users\[yourname]\Downloads\braindocsclient-1.0.2.zip`.
+For example: `C:\> pip install C:\Users\[yourname]\Downloads\braindocsclient-1.0.2.zip`.
 
 ## Scripts
 
@@ -53,10 +53,23 @@ __Core Features:__
 
 __Usage__:
 
-After installation the command can be run in a terminal window:
+After installation the command can be run in a terminal window.
+
+Since all files (export data, settings, etc.) are stored in the current working directory, make sure to change directory to the location of your choice, e.g.:
+
+```
+$ cd C:\Users\[yourname]\Desktop\BD SQL Data
+```
+
+Then run `braindocs2database`:
 
 ```
 $ braindocs2database
+```
+
+The response then should be:
+
+```
 braindocs2database
 Copyright (c) 2015 ai-one inc. All rights reserved.
 
@@ -73,25 +86,17 @@ DATABASE
 Update settings? [no]?
 ```
 
-It displays the current settings and asks the user if he wants to update the configuration. 
+It displays the current settings and asks the user if he wants to update the configuration. `no` is the default response as no settings will be changed.
 
-__Local Export__
+* __First time__: User should enter [yes] and complete prompts for user’s BrainDocs Account including the username, password and url.
+* __Warning__: User should note that the program will download all Analyses in the user account every time and overwrite the file. If the user wishes to preserve the previous version, the file name for the download should be changed here.
+* __Additional BrainDocs account(s)__: If the user has additional accounts, the data can be downloaded by changing the username and password but we recommend changing the file name for each download here to avoid overwriting the db file from the other account(s). Alternatively the program could be executed from a different folder setup for that data.
+* __Optionally - change target database:__
+   * _Local Export_: Per default `braindocs2database` exports the data into a local [SQLite](https://www.sqlite.org/) database.
+   * _MySQL Export_: To export into a [MySQL](https://www.mysql.com/), the `DATABASE -> url` option needs to be changed from `sqlite:///braindocs_export.db` to e.g. `mysql://root@localhost/braindocs`. Make sure that the appropriate Python extension for MySQL is installed. This can be done via: `$ pip install mysql-python`.
 
-Per default `braindocs2database` exports the data into a local [SQLite](https://www.sqlite.org/) database.
+Once the user has completed any changes to the settings and verified the changes, [enter] at the Update settings? Prompt will run the program as in the example below.
 
-__MySQL Export__
-
-To export into a [MySQL](https://www.mysql.com/), the `DATABASE -> url` option needs to be changed from `sqlite:///braindocs_export.db` to e.g.:
-
-```
-mysql://root@localhost/braindocs
-```
-
-Make sure that the appropriate Python extension for MySQL is installed. This can be done via:
-
-```
-pip install mysql-python
-```
 
 If `no` (default option when hitting `Enter`), the program runs the export/import with the given settings:
 
