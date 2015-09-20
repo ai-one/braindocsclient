@@ -55,6 +55,9 @@ __Usage__:
 
 After installation the command can be run in a terminal window.
 
+_Step 1:_
+--
+
 Since all files (export data, settings, etc.) are stored in the current working directory, make sure to change directory to the location of your choice, e.g.:
 
 ```
@@ -97,6 +100,10 @@ It displays the current settings and asks the user if he wants to update the con
 
 Once the user has completed any changes to the settings and verified the changes, [enter] at the Update settings? Prompt will run the program as in the example below.
 
+_Step 2:_
+--
+
+Per default `braindocs2database` now exports the data into a local [SQLite](https://www.sqlite.org/) database.
 
 If `no` (default option when hitting `Enter`), the program runs the export/import with the given settings:
 
