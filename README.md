@@ -18,6 +18,31 @@ To install a specific release or experimental branch, run:
 $ pip install git+https://github.com/ai-one/braindocsclient.git@v1.0.1
 ```
 
+## Installation on Windows
+
+__Requirements__
+
+Before installing and running this utility, the user must have the following:
+
+1. BrainDocs account, URL, Username and Password.
+2. Install Python 2.7 – this can be found at www.python.org
+3. Install DB Browser for SQLite – this can be found at www.sqlitebrowser.org
+4. Setup a folder for the database files – for example on your Desktop C:\Users\[yourname]\Desktop\BD SQL Data
+
+__Installation__
+
+The current version of BraindocsClient can be found at https://github.com/ai-one/braindocsclient/releases
+
+1. Download the Source code (zip) of the latest version.
+2. Open the Command Prompt window.
+3. Install the program, at the Command Prompt type:
+
+```
+pip install [location and name of the downloaded zip file]
+```
+
+For example: `pip install C:\Users\[yourname]\Downloads\braindocsclient-1.0.2.zip`.
+
 ## Scripts
 
 ### `braindocs2database`
