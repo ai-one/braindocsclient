@@ -61,13 +61,13 @@ _Step 1:_
 Since all files (export data, settings, etc.) are stored in the current working directory, make sure to change directory to the location of your choice, e.g.:
 
 ```
-$ cd C:\Users\[yourname]\Desktop\BD SQL Data
+C:\>cd C:\Users\[yourname]\Desktop\BD SQL Data
 ```
 
 Then run `braindocs2database`:
 
 ```
-$ braindocs2database
+C:\Users\[yourname]\Desktop\BD SQL Data>braindocs2database
 ```
 
 The response then should be:
