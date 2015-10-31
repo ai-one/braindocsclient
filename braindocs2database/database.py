@@ -3,7 +3,7 @@
 """
 
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, Integer, String, Float, Sequence, UnicodeText, DateTime, ForeignKey
+from sqlalchemy import Column, Integer, Unicode, Float, Sequence, UnicodeText, DateTime, ForeignKey
 from sqlalchemy.orm import relationship, backref 
 from contextlib import contextmanager
 
@@ -11,16 +11,16 @@ Base = declarative_base()
 
 class AnalysisResultTextUnit(Base):
     __tablename__ = 'analysisresults_textunit'
-    _id = Column(String(32), primary_key=True)
+    _id = Column(Unicode(32), primary_key=True)
     score = Column(Float)
     fingerprint_id = Column(Integer())
-    similarityAnalysis_id = Column(String(32), ForeignKey('analysisresults.analysisId'))
-    doc_id = Column(String(32))
+    similarityAnalysis_id = Column(Unicode(32), ForeignKey('analysisresults.analysisId'))
+    doc_id = Column(Unicode(32))
     doc_name = Column(UnicodeText())
-    relevancy = Column(String(45))
-    agentId = Column(String(32))
+    relevancy = Column(Unicode(45))
+    agentId = Column(Unicode(32))
     agentName = Column(UnicodeText())
-    text_unit_ids = Column(String(32))
+    text_unit_ids = Column(Unicode(32))
     text = Column(UnicodeText())
 
     def __repr__(self):
@@ -30,23 +30,23 @@ class AnalysisResultTextUnit(Base):
 
 class AnalysisResult(Base):
     __tablename__ = 'analysisresults'
-    _id = Column(String(32))
-    analysisId = Column(String(32), primary_key=True)
+    _id = Column(Unicode(32))
+    analysisId = Column(Unicode(32), primary_key=True)
     textunits = relationship("AnalysisResultTextUnit", order_by=AnalysisResultTextUnit.score.desc(), backref=backref('analysis'))
     agentBaselineScore = Column(Float())
-    agentId = Column(String(32))
-    agentLibraryId = Column(String(32))
+    agentId = Column(Unicode(32))
+    agentLibraryId = Column(Unicode(32))
     agentName = Column(UnicodeText())
     create_date = Column(DateTime())
-    customKeywordBoost = Column(String(32))
+    customKeywordBoost = Column(Unicode(32))
     customKeywords = Column(UnicodeText())
-    cutoffScore = Column(String(32))
-    handleWindow = Column(String(32))
-    libraryId = Column(String(32))
+    cutoffScore = Column(Unicode(32))
+    handleWindow = Column(Unicode(32))
+    libraryId = Column(Unicode(32))
     libraryName = Column(UnicodeText())
     name = Column(UnicodeText())
-    status = Column(String(32))
-    userid = Column(String(32))
+    status = Column(Unicode(32))
+    userid = Column(Unicode(32))
     def __repr__(self):
         textunits = ""
         if len(self.textunits) >= 1:

@@ -9,6 +9,7 @@ from sqlalchemy.orm import sessionmaker
 from braindocsclient import BraindocsApi
 from database import Base, AnalysisResult, AnalysisResultTextUnit, session_scope
 from configparser import PromptingConfigParser, promptyesno
+import json
 
 def iterprogress(it, name="task", freq=10, total=None):
     if total is None:
@@ -83,9 +84,8 @@ def main():
         for ar in iterprogress(bd.getAnalysisResults(), "importing analysis results", 1):
             arentry = AnalysisResult()
             for key, value in ar.iteritems():
-                if key in ["customKeywords", "userid"]:
-                    if not value is None: 
-                        value = ",".join(v.replace(",", "\\,") for v in value)
+                if isinstance(value, (list, dict)):
+                    value = json.dumps(value, ensure_ascii=False)
                 if key == "create_date":
                     value = dateutil.parser.parse(value).replace(tzinfo=None)
                 setattr(arentry, key, value)
